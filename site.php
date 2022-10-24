@@ -38,8 +38,19 @@ echo substr($stringDataType, 3, 4);
     // null
     $nullDataType = null;
     echo $booleanDataType;
+    ?>
+    // user input
+    <form action="site.php" method="get" >
 
-    
+    Name: <input type="text" name="user_name" id=""></br>
+    Age: <input type="number" name="user_age" id="">
+<input type="submit" value="submit">
+    </form>
+   Your name is:  <?php
+    echo $_GET["user_name"];
+    "Your age is:";
+      echo $_GET["user_age"]
+
     ?>
 </body>
 
