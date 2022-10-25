@@ -45,13 +45,14 @@
         Name: <input type="text" name="user_name" id=""></br>
         Age: <input type="number" name="user_age" id="">
         Password: <input type="password" name="pass" id="">
-       Apple <input type="checkbox" name="fruits[]" value="Apple">
-       Banana <input type="checkbox" name="fruits[]" value="Banana">
-       Pineapple <input type="checkbox" name="fruits[]" value="Pineapple">
-
+        Apple <input type="checkbox" name="fruits[]" value="Apple">
+        Banana <input type="checkbox" name="fruits[]" value="Banana">
+        Pineapple <input type="checkbox" name="fruits[]" value="Pineapple">
+        Associative array <input type="text" name="student" value="Pineapple">
         <input type="submit" value="submit">
     </form>
     Your name is: <?php
+     
                     echo $_POST["user_name"];
                     "Your age is:";
                     echo $_POST["user_age"];
@@ -64,6 +65,13 @@
                     $fruits = $_POST["fruits"];
                     echo $fruits[0];
                     // for( $i=0; $i<$friends.len )
+
+                    // associative array
+                    $grades = array("Jane" => "A", "Adam" => "A+", "Colly" => "C+");
+                    echo $grades["Jane"];
+                    $grades["Jane"] = "B";
+                    echo $grades[$_POST["student"]];
+                  
                     ?>
 </body>
 
