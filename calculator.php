@@ -9,22 +9,34 @@
 </head>
 
 <body>
-    <form action="calculator.php" method="get">
-        <input type="number" name="num1">
+    <form action="calculator.php" method="post">
+        Type number a: <input type="number" step="0.001" name="num1">
         <br>
-        <input type="number" name="num2">
+        Type number b: <input type="number" step="0.001" name="num2">
+        Operator: <input type="text" name="operator">
+
         <input type="submit" value="">
     </form>
     <?php
-    $summa = $_GET["num1"] + $_GET["num2"];
-    $differense = $_GET["num1"] - $_GET["num2"];
-    $product = $_GET["num1"] * $_GET["num2"];
-    $quotient = $_GET["num1"] / $_GET["num2"];
-    echo "Summa $summa </br>";
-    echo "Differense $differense </br>";
-    echo "Product of two numbers $product </br>";
-    echo "Quotient $quotient </br>";
-    
+    $operator = $_POST["operator"];
+    if ($operator == "+") {
+        $summa = $_POST["num1"] + $_POST["num2"];
+        echo "Summa $summa </br>";
+    } elseif ($operator == "-") {
+        $differense = $_POST["num1"] - $_POST["num2"];
+        echo "Differense $differense </br>";
+    } elseif ($operator == "*") {
+        $product = $_POST["num1"] * $_POST["num2"];
+
+        echo "Product of two numbers $product </br>";
+    } elseif ($operator == "/") {
+        $quotient = $_POST["num1"] / $_POST["num2"];
+
+        echo "Quotient $quotient </br>";
+    } else {
+        echo "Something wrent wrong  </br>";
+    }
+
     ?>
 </body>
 

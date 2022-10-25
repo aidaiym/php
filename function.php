@@ -22,6 +22,35 @@
     }
     $resCube = cube(7);
     echo "Cube = $resCube";
+
+    // conditions
+    $isMale = true;
+    if($isMale){
+        echo "Male <br>";
+    }
+    elseif(!$isMale){
+        echo "Female <br>";
+    }
+    else{
+        echo "OMG <br>";
+    }
+
+    function getMax($number_one, $number_two){
+        if($number_one>$number_two){
+            echo "Number one grater then number two ";
+            return $number_one;
+        }
+        elseif($number_one<$number_two){
+            echo "Number two grater then number one ";
+            return $number_two;
+        }
+        else{
+            echo "Numbers are equal";
+            return $number_one && $number_two;
+        }
+    }
+
+    getMax(3,3);
     ?>
 </body>
 
