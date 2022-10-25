@@ -25,8 +25,8 @@
     echo strtoupper($stringDataType);  // contert to upperCase
     echo strlen($stringDataType);  // length
     echo $stringDataType[4];  // first charachter
-    echo str_replace("string","replacing", $stringDataType);  // first charachter
-echo substr($stringDataType, 3, 4);
+    echo str_replace("string", "replacing", $stringDataType);  // first charachter
+    echo substr($stringDataType, 3, 4);
 
 
     // integers
@@ -40,18 +40,31 @@ echo substr($stringDataType, 3, 4);
     echo $booleanDataType;
     ?>
     // user input
-    <form action="site.php" method="get" >
+    <form action="site.php" method="post">
 
-    Name: <input type="text" name="user_name" id=""></br>
-    Age: <input type="number" name="user_age" id="">
-<input type="submit" value="submit">
+        Name: <input type="text" name="user_name" id=""></br>
+        Age: <input type="number" name="user_age" id="">
+        Password: <input type="password" name="pass" id="">
+       Apple <input type="checkbox" name="fruits[]" value="Apple">
+       Banana <input type="checkbox" name="fruits[]" value="Banana">
+       Pineapple <input type="checkbox" name="fruits[]" value="Pineapple">
+
+        <input type="submit" value="submit">
     </form>
-   Your name is:  <?php
-    echo $_GET["user_name"];
-    "Your age is:";
-      echo $_GET["user_age"]
+    Your name is: <?php
+                    echo $_POST["user_name"];
+                    "Your age is:";
+                    echo $_POST["user_age"];
+                    // POST method
+                    echo $_POST["pass"];
+                    // array
 
-    ?>
+                    $friends = array("Alina", "Meerim", "Kesha", "Nurjamal");
+                    echo $friends[0];
+                    $fruits = $_POST["fruits"];
+                    echo $fruits[0];
+                    // for( $i=0; $i<$friends.len )
+                    ?>
 </body>
 
 </html>
