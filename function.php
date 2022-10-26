@@ -96,6 +96,26 @@
     $newStud = new Student("Ad", 3.4);
     $newStud2 = new Student("Adam", 3.0);
 echo $newStud -> hasHonors();
+
+class Movies{
+    public $title;
+    private $reting;
+function __construct($title, $rating)
+{
+    $this->title = $title;
+    $this->rating = $rating;
+
+}
+function getRating()
+{
+    return $this->rating;
+}
+
+function setRating($rating){
+$this->rating = $rating;
+}
+}
+$avngers = new Movies("Avangers", "PG-13")
     ?>
 </body>
 
