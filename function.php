@@ -25,32 +25,77 @@
 
     // conditions
     $isMale = true;
-    if($isMale){
+    if ($isMale) {
         echo "Male <br>";
-    }
-    elseif(!$isMale){
+    } elseif (!$isMale) {
         echo "Female <br>";
-    }
-    else{
+    } else {
         echo "OMG <br>";
     }
 
-    function getMax($number_one, $number_two){
-        if($number_one>$number_two){
+    function getMax($number_one, $number_two)
+    {
+        if ($number_one > $number_two) {
             echo "Number one grater then number two ";
             return $number_one;
-        }
-        elseif($number_one<$number_two){
+        } elseif ($number_one < $number_two) {
             echo "Number two grater then number one ";
             return $number_two;
-        }
-        else{
+        } else {
             echo "Numbers are equal";
             return $number_one && $number_two;
         }
     }
 
-    getMax(3,3);
+    getMax(3, 3);
+
+    //  classes 
+    class Book
+    {
+        var $title;
+        var $author;
+        var $pages;
+        // constructor
+        function __construct($atitle, $abook, $aPages)
+        {
+            $this->title = $atitle;
+            $this->author = $abook;
+            $this->pages = $aPages;
+        }
+    }
+
+    $newBook = new Book("Harry", "Potter", "450"); // object
+    $book1 = new Book("sd", "sdf", "432");
+
+    $newBook->author = "Harry";
+    $newBook->title = "Potter";
+    $newBook->pages = "450";
+
+    echo $newBook->author;
+
+    // object function
+    class Student
+    {
+        var $name;
+        var $gpa;
+        function __construct($name, $gpa)
+        {
+            $this->name = $name;
+            $this->gpa = $gpa;
+
+        }
+        function hasHonors()
+        {
+            if ($this->gpa > 3.0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+    $newStud = new Student("Ad", 3.4);
+    $newStud2 = new Student("Adam", 3.0);
+echo $newStud -> hasHonors();
     ?>
 </body>
 

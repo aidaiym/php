@@ -73,6 +73,9 @@
                     echo $grades[$_POST["student"]];
                   
                     ?>
+               <!-- include -->
+               <?php include "header.html" ?>
+               
 </body>
 
 </html>
